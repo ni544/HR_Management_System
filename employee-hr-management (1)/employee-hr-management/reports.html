@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link is-active" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Reports</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Reports</h1>
+            <p class="page-subtitle">Organization-wide HR analytics for September 2026</p>
+          </div>
+        </div>
+
+        <div class="report-grid">
+          <div class="report-card">
+            <div class="report-card__icon">&#128101;</div>
+            <div class="report-card__title">Employee Report</div>
+            <div class="report-card__desc">Headcount, roles and department distribution</div>
+            <span class="report-card__link">View report &rsaquo;</span>
+          </div>
+          <div class="report-card">
+            <div class="report-card__icon">&#128337;</div>
+            <div class="report-card__title">Attendance Report</div>
+            <div class="report-card__desc">Daily and monthly attendance trends</div>
+            <span class="report-card__link">View report &rsaquo;</span>
+          </div>
+          <div class="report-card">
+            <div class="report-card__icon">&#128197;</div>
+            <div class="report-card__title">Leave Report</div>
+            <div class="report-card__desc">Leave utilization across departments</div>
+            <span class="report-card__link">View report &rsaquo;</span>
+          </div>
+          <div class="report-card">
+            <div class="report-card__icon">&#128176;</div>
+            <div class="report-card__title">Payroll Report</div>
+            <div class="report-card__desc">Compensation and payout summaries</div>
+            <span class="report-card__link">View report &rsaquo;</span>
+          </div>
+          <div class="report-card">
+            <div class="report-card__icon">&#127970;</div>
+            <div class="report-card__title">Department Report</div>
+            <div class="report-card__desc">Team sizes and department performance</div>
+            <span class="report-card__link">View report &rsaquo;</span>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card card-pad">
+            <h2 class="section-title" style="margin-bottom:16px;">Department Distribution</h2>
+            <div class="bar-chart">
+              <div class="bar-chart__row">
+                <span class="bar-chart__label">Engineering</span>
+                <div class="bar-chart__track"><div class="bar-chart__fill" style="width:42%; --bar-color:#2A4BD9;"></div></div>
+                <span class="bar-chart__value">42%</span>
+              </div>
+              <div class="bar-chart__row">
+                <span class="bar-chart__label">HR</span>
+                <div class="bar-chart__track"><div class="bar-chart__fill" style="width:18%; --bar-color:#157F3C;"></div></div>
+                <span class="bar-chart__value">18%</span>
+              </div>
+              <div class="bar-chart__row">
+                <span class="bar-chart__label">Finance</span>
+                <div class="bar-chart__track"><div class="bar-chart__fill" style="width:14%; --bar-color:#A5670C;"></div></div>
+                <span class="bar-chart__value">14%</span>
+              </div>
+              <div class="bar-chart__row">
+                <span class="bar-chart__label">Marketing</span>
+                <div class="bar-chart__track"><div class="bar-chart__fill" style="width:11%; --bar-color:#C22A3E;"></div></div>
+                <span class="bar-chart__value">11%</span>
+              </div>
+              <div class="bar-chart__row">
+                <span class="bar-chart__label">Operations</span>
+                <div class="bar-chart__track"><div class="bar-chart__fill" style="width:15%; --bar-color:#6B7080;"></div></div>
+                <span class="bar-chart__value">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-pad">
+            <h2 class="section-title" style="margin-bottom:16px;">Attendance Summary</h2>
+            <div class="donut" style="--pct:92;">
+              <div class="donut__hole">
+                <strong>92%</strong>
+                <span>Present</span>
+              </div>
+            </div>
+            <div class="legend">
+              <span class="legend__item"><span class="legend__dot" style="--dot-color:#2A4BD9;"></span>Present 92%</span>
+              <span class="legend__item"><span class="legend__dot" style="--dot-color:#C22A3E;"></span>Absent 4%</span>
+              <span class="legend__item"><span class="legend__dot" style="--dot-color:#A5670C;"></span>Leave 4%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-pad" style="margin-top:20px;">
+          <h2 class="section-title" style="margin-bottom:16px;">Employee Distribution by Department</h2>
+          <div class="bar-chart">
+            <div class="bar-chart__row">
+              <span class="bar-chart__label">Engineering</span>
+              <div class="bar-chart__track"><div class="bar-chart__fill" style="width:84%; --bar-color:#2A4BD9;"></div></div>
+              <span class="bar-chart__value">420</span>
+            </div>
+            <div class="bar-chart__row">
+              <span class="bar-chart__label">HR</span>
+              <div class="bar-chart__track"><div class="bar-chart__fill" style="width:36%; --bar-color:#157F3C;"></div></div>
+              <span class="bar-chart__value">180</span>
+            </div>
+            <div class="bar-chart__row">
+              <span class="bar-chart__label">Finance</span>
+              <div class="bar-chart__track"><div class="bar-chart__fill" style="width:32%; --bar-color:#A5670C;"></div></div>
+              <span class="bar-chart__value">160</span>
+            </div>
+            <div class="bar-chart__row">
+              <span class="bar-chart__label">Marketing</span>
+              <div class="bar-chart__track"><div class="bar-chart__fill" style="width:28%; --bar-color:#C22A3E;"></div></div>
+              <span class="bar-chart__value">140</span>
+            </div>
+            <div class="bar-chart__row">
+              <span class="bar-chart__label">Operations</span>
+              <div class="bar-chart__track"><div class="bar-chart__fill" style="width:70%; --bar-color:#6B7080;"></div></div>
+              <span class="bar-chart__value">348</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

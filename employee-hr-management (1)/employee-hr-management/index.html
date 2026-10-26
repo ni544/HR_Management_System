@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong> HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link is-active" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Dashboard</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Good Morning, Admin &#128075;</h1>
+            <p class="page-subtitle">Here's what's happening with your organization today &middot; Friday, September 18, 2026</p>
+          </div>
+          <a class="btn btn-primary" href="add-employee.html">+ Add Employee</a>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card" style="--stat-accent:#2A4BD9">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Total Employees</span>
+              <span class="stat-card__icon">&#128101;</span>
+            </div>
+            <div class="stat-card__value">1,248</div>
+            <div class="stat-card__meta is-up">&#9650; 8.2% this month</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#157F3C">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Present Today</span>
+              <span class="stat-card__icon">&#9989;</span>
+            </div>
+            <div class="stat-card__value">1,156</div>
+            <div class="stat-card__meta">92.6% attendance</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#A5670C">
+            <div class="stat-card__top">
+              <span class="stat-card__label">On Leave</span>
+              <span class="stat-card__icon">&#127958;</span>
+            </div>
+            <div class="stat-card__value">42</div>
+            <div class="stat-card__meta">Employees on leave</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#C22A3E">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Pending Requests</span>
+              <span class="stat-card__icon">&#128203;</span>
+            </div>
+            <div class="stat-card__value">18</div>
+            <div class="stat-card__meta">Awaiting approval</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#2A4BD9">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Monthly Payroll</span>
+              <span class="stat-card__icon">&#8377;</span>
+            </div>
+            <div class="stat-card__value">&#8377;42.8L</div>
+            <div class="stat-card__meta">For September 2026</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#6B7080">
+            <div class="stat-card__top">
+              <span class="stat-card__label">Active Departments</span>
+              <span class="stat-card__icon">&#127970;</span>
+            </div>
+            <div class="stat-card__value">12</div>
+            <div class="stat-card__meta">Across the organization</div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div>
+            <div class="table-container" style="margin-bottom:20px;">
+              <div style="padding:18px 20px 4px;">
+                <div class="section-header" style="margin-bottom:0;">
+                  <h2 class="section-title">Recent Employees</h2>
+                  <a class="section-link" href="employees.html">View all employees</a>
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Employee ID</th>
+                      <th>Employee</th>
+                      <th>Department</th>
+                      <th>Position</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>EMP001</td>
+                      <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Aarav Sharma</span></div></td>
+                      <td>Engineering</td>
+                      <td>Software Engineer</td>
+                      <td><span class="status-badge status-badge--success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td>EMP002</td>
+                      <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Ananya Singh</span></div></td>
+                      <td>Human Resources</td>
+                      <td>HR Executive</td>
+                      <td><span class="status-badge status-badge--success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td>EMP003</td>
+                      <td><div class="cell-person"><span class="cell-person__avatar">RV</span><span class="cell-person__name">Rahul Verma</span></div></td>
+                      <td>Finance</td>
+                      <td>Accountant</td>
+                      <td><span class="status-badge status-badge--success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td>EMP004</td>
+                      <td><div class="cell-person"><span class="cell-person__avatar">PG</span><span class="cell-person__name">Priya Gupta</span></div></td>
+                      <td>Marketing</td>
+                      <td>Marketing Executive</td>
+                      <td><span class="status-badge status-badge--warning">On Leave</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <div style="padding:18px 20px 4px;">
+                <div class="section-header" style="margin-bottom:0;">
+                  <h2 class="section-title">Recent Leave Requests</h2>
+                  <a class="section-link" href="leave.html">View all requests</a>
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Employee</th>
+                      <th>Leave Type</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Ananya Singh</span></div></td>
+                      <td>Casual Leave</td>
+                      <td>18 Sep</td>
+                      <td>19 Sep</td>
+                      <td><span class="status-badge status-badge--warning">Pending</span></td>
+                      <td class="table-actions">
+                        <button class="btn btn-secondary btn-sm">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell-person"><span class="cell-person__avatar">RV</span><span class="cell-person__name">Rahul Verma</span></div></td>
+                      <td>Sick Leave</td>
+                      <td>17 Sep</td>
+                      <td>18 Sep</td>
+                      <td><span class="status-badge status-badge--success">Approved</span></td>
+                      <td class="table-actions">
+                        <button class="btn btn-secondary btn-sm">View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell-person"><span class="cell-person__avatar">PG</span><span class="cell-person__name">Priya Gupta</span></div></td>
+                      <td>Annual Leave</td>
+                      <td>20 Sep</td>
+                      <td>25 Sep</td>
+                      <td><span class="status-badge status-badge--warning">Pending</span></td>
+                      <td class="table-actions">
+                        <button class="btn btn-secondary btn-sm">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card card-pad" style="margin-bottom:20px;">
+              <h2 class="section-title" style="margin-bottom:14px;">Today's Attendance</h2>
+              <div class="donut" style="--pct:92;">
+                <div class="donut__hole">
+                  <strong>92%</strong>
+                  <span>Present</span>
+                </div>
+              </div>
+              <div class="legend">
+                <span class="legend__item"><span class="legend__dot" style="--dot-color:#2A4BD9;"></span>Present 92%</span>
+                <span class="legend__item"><span class="legend__dot" style="--dot-color:#C22A3E;"></span>Absent 4%</span>
+                <span class="legend__item"><span class="legend__dot" style="--dot-color:#A5670C;"></span>On Leave 4%</span>
+              </div>
+              <div class="divider"></div>
+              <div class="progress-row">
+                <div class="progress-row__labels"><span>Present</span><span>92%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:92%; --bar-color:#157F3C;"></div></div>
+              </div>
+              <div class="progress-row">
+                <div class="progress-row__labels"><span>Absent</span><span>4%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:4%; --bar-color:#C22A3E;"></div></div>
+              </div>
+              <div class="progress-row">
+                <div class="progress-row__labels"><span>On Leave</span><span>4%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:4%; --bar-color:#A5670C;"></div></div>
+              </div>
+            </div>
+
+            <div class="card card-pad" style="margin-bottom:20px;">
+              <h2 class="section-title" style="margin-bottom:14px;">Quick Actions</h2>
+              <div class="quick-actions">
+                <a class="quick-action" href="add-employee.html"><span class="quick-action__icon">&#10133;</span>Add Employee</a>
+                <a class="quick-action" href="leave.html"><span class="quick-action__icon">&#128197;</span>Review Leaves</a>
+                <a class="quick-action" href="payroll.html"><span class="quick-action__icon">&#128176;</span>Run Payroll</a>
+                <a class="quick-action" href="reports.html"><span class="quick-action__icon">&#128202;</span>View Reports</a>
+              </div>
+            </div>
+
+            <div class="card card-pad">
+              <h2 class="section-title" style="margin-bottom:14px;">Recent Activity</h2>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-item__dot"></span>
+                  <div class="activity-item__body">
+                    <p>Priya Gupta submitted an annual leave request</p>
+                    <span>10 minutes ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-item__dot"></span>
+                  <div class="activity-item__body">
+                    <p>Payroll for August was marked as processed</p>
+                    <span>2 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-item__dot"></span>
+                  <div class="activity-item__body">
+                    <p>Rahul Verma's sick leave was approved</p>
+                    <span>Yesterday</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <span class="activity-item__dot"></span>
+                  <div class="activity-item__body">
+                    <p>New employee Meera Nair joined Engineering</p>
+                    <span>2 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

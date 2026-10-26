@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave Management — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link is-active" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Leave Management</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Leave Management</h1>
+            <p class="page-subtitle">Review and track employee leave requests</p>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card" style="--stat-accent:#2A4BD9">
+            <div class="stat-card__top"><span class="stat-card__label">Total Requests</span><span class="stat-card__icon">&#128203;</span></div>
+            <div class="stat-card__value">86</div>
+            <div class="stat-card__meta">This month</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#A5670C">
+            <div class="stat-card__top"><span class="stat-card__label">Pending</span><span class="stat-card__icon">&#8987;</span></div>
+            <div class="stat-card__value">18</div>
+            <div class="stat-card__meta">Awaiting decision</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#157F3C">
+            <div class="stat-card__top"><span class="stat-card__label">Approved</span><span class="stat-card__icon">&#9989;</span></div>
+            <div class="stat-card__value">58</div>
+            <div class="stat-card__meta">This month</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#C22A3E">
+            <div class="stat-card__top"><span class="stat-card__label">Rejected</span><span class="stat-card__icon">&#10060;</span></div>
+            <div class="stat-card__value">10</div>
+            <div class="stat-card__meta">This month</div>
+          </div>
+        </div>
+
+        <div class="table-toolbar">
+          <div class="search-box">
+            <span class="search-box__icon">&#128269;</span>
+            <input type="text" placeholder="Search by employee or request ID...">
+          </div>
+          <button class="btn btn-secondary">Export</button>
+        </div>
+
+        <div class="table-container">
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Request ID</th>
+                  <th>Employee</th>
+                  <th>Leave Type</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Duration</th>
+                  <th>Reason</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LV001</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Aarav Sharma</span></div></td>
+                  <td>Casual Leave</td>
+                  <td>20 Sep 2026</td>
+                  <td>21 Sep 2026</td>
+                  <td>2 Days</td>
+                  <td>Personal work</td>
+                  <td><span class="status-badge status-badge--warning">Pending</span></td>
+                  <td class="table-actions">
+                    <button class="btn btn-secondary btn-sm">View</button>
+                    <button class="btn btn-primary btn-sm">Approve</button>
+                    <button class="btn btn-danger-outline btn-sm">Reject</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>LV002</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Ananya Singh</span></div></td>
+                  <td>Casual Leave</td>
+                  <td>18 Sep 2026</td>
+                  <td>19 Sep 2026</td>
+                  <td>2 Days</td>
+                  <td>Family function</td>
+                  <td><span class="status-badge status-badge--warning">Pending</span></td>
+                  <td class="table-actions">
+                    <button class="btn btn-secondary btn-sm">View</button>
+                    <button class="btn btn-primary btn-sm">Approve</button>
+                    <button class="btn btn-danger-outline btn-sm">Reject</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>LV003</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">RV</span><span class="cell-person__name">Rahul Verma</span></div></td>
+                  <td>Sick Leave</td>
+                  <td>17 Sep 2026</td>
+                  <td>18 Sep 2026</td>
+                  <td>2 Days</td>
+                  <td>Fever</td>
+                  <td><span class="status-badge status-badge--success">Approved</span></td>
+                  <td class="table-actions"><button class="btn btn-secondary btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td>LV004</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">PG</span><span class="cell-person__name">Priya Gupta</span></div></td>
+                  <td>Annual Leave</td>
+                  <td>20 Sep 2026</td>
+                  <td>25 Sep 2026</td>
+                  <td>6 Days</td>
+                  <td>Family vacation</td>
+                  <td><span class="status-badge status-badge--warning">Pending</span></td>
+                  <td class="table-actions">
+                    <button class="btn btn-secondary btn-sm">View</button>
+                    <button class="btn btn-primary btn-sm">Approve</button>
+                    <button class="btn btn-danger-outline btn-sm">Reject</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>LV005</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">VR</span><span class="cell-person__name">Vikram Rao</span></div></td>
+                  <td>Casual Leave</td>
+                  <td>10 Sep 2026</td>
+                  <td>10 Sep 2026</td>
+                  <td>1 Day</td>
+                  <td>Personal errand</td>
+                  <td><span class="status-badge status-badge--danger">Rejected</span></td>
+                  <td class="table-actions"><button class="btn btn-secondary btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td>LV006</td>
+                  <td><div class="cell-person"><span class="cell-person__avatar">SK</span><span class="cell-person__name">Sanya Kapoor</span></div></td>
+                  <td>Sick Leave</td>
+                  <td>05 Sep 2026</td>
+                  <td>06 Sep 2026</td>
+                  <td>2 Days</td>
+                  <td>Medical appointment</td>
+                  <td><span class="status-badge status-badge--success">Approved</span></td>
+                  <td class="table-actions"><button class="btn btn-secondary btn-sm">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
