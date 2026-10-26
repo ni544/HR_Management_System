@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link is-active" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Settings</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Settings</h1>
+            <p class="page-subtitle">Manage organization, profile and system preferences</p>
+          </div>
+        </div>
+
+        <nav class="settings-nav">
+          <span class="settings-nav__item is-active">Organization</span>
+          <span class="settings-nav__item">Profile</span>
+          <span class="settings-nav__item">Preferences</span>
+          <span class="settings-nav__item">Notifications</span>
+        </nav>
+
+        <form>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Organization Settings</h2>
+            <p class="form-section__hint">Details shown across employee-facing documents</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="orgName">Company Name</label>
+                <input class="form-control" type="text" id="orgName" value="Nimbus Technologies Pvt. Ltd.">
+              </div>
+              <div class="form-group">
+                <label for="orgEmail">Company Email</label>
+                <input class="form-control" type="email" id="orgEmail" value="hr@nimbustech.com">
+              </div>
+              <div class="form-group">
+                <label for="orgPhone">Phone</label>
+                <input class="form-control" type="tel" id="orgPhone" value="+91 11 4567 8900">
+              </div>
+              <div class="form-group">
+                <label for="orgAddress">Address</label>
+                <input class="form-control" type="text" id="orgAddress" value="Tower B, DLF Cyber City, Gurugram, Haryana">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Profile Settings</h2>
+            <p class="form-section__hint">Your personal administrator account details</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="pfName">Name</label>
+                <input class="form-control" type="text" id="pfName" value="Admin User">
+              </div>
+              <div class="form-group">
+                <label for="pfEmail">Email</label>
+                <input class="form-control" type="email" id="pfEmail" value="admin@nimbustech.com">
+              </div>
+              <div class="form-group">
+                <label for="pfRole">Role</label>
+                <input class="form-control" type="text" id="pfRole" value="HR Administrator" disabled>
+              </div>
+              <div class="form-group">
+                <label for="pfPhone">Phone</label>
+                <input class="form-control" type="tel" id="pfPhone" value="+91 98765 00000">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Interface Preferences</h2>
+            <p class="form-section__hint">Personalize how the system is displayed to you</p>
+            <div class="form-grid cols-3">
+              <div class="form-group">
+                <label for="language">Language</label>
+                <select class="form-control" id="language">
+                  <option>English</option>
+                  <option>Hindi</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timezone">Timezone</label>
+                <select class="form-control" id="timezone">
+                  <option>(GMT+5:30) India Standard Time</option>
+                  <option>(GMT+0:00) UTC</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dateFormat">Date Format</label>
+                <select class="form-control" id="dateFormat">
+                  <option>DD/MM/YYYY</option>
+                  <option>MM/DD/YYYY</option>
+                  <option>YYYY-MM-DD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Notification Preferences</h2>
+            <p class="form-section__hint">Choose which updates you want to be notified about</p>
+            <div class="checkbox-list">
+              <label class="checkbox-option">
+                <input type="checkbox" checked>
+                <span class="checkbox-option__text">
+                  <strong>Email notifications</strong>
+                  <span>Receive a summary of important HR activity by email</span>
+                </span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" checked>
+                <span class="checkbox-option__text">
+                  <strong>Leave request notifications</strong>
+                  <span>Get notified when an employee submits a leave request</span>
+                </span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox">
+                <span class="checkbox-option__text">
+                  <strong>Payroll notifications</strong>
+                  <span>Get notified when payroll is processed or pending</span>
+                </span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" checked>
+                <span class="checkbox-option__text">
+                  <strong>Attendance alerts</strong>
+                  <span>Get notified about unusual attendance patterns</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-secondary" type="button">Reset</button>
+            <button class="btn btn-primary" type="button">Save Changes</button>
+          </div>
+
+        </form>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

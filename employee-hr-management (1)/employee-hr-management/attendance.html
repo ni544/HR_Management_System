@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link is-active" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Attendance</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Attendance</h1>
+            <p class="page-subtitle">Daily attendance overview for Friday, September 18, 2026</p>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card" style="--stat-accent:#2A4BD9">
+            <div class="stat-card__top"><span class="stat-card__label">Total Employees</span><span class="stat-card__icon">&#128101;</span></div>
+            <div class="stat-card__value">1,248</div>
+            <div class="stat-card__meta">Across 12 departments</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#157F3C">
+            <div class="stat-card__top"><span class="stat-card__label">Present</span><span class="stat-card__icon">&#9989;</span></div>
+            <div class="stat-card__value">1,156</div>
+            <div class="stat-card__meta">92.6% of workforce</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#C22A3E">
+            <div class="stat-card__top"><span class="stat-card__label">Absent</span><span class="stat-card__icon">&#10060;</span></div>
+            <div class="stat-card__value">50</div>
+            <div class="stat-card__meta">4.0% of workforce</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#A5670C">
+            <div class="stat-card__top"><span class="stat-card__label">On Leave</span><span class="stat-card__icon">&#127958;</span></div>
+            <div class="stat-card__value">42</div>
+            <div class="stat-card__meta">3.4% of workforce</div>
+          </div>
+          <div class="stat-card" style="--stat-accent:#6B7080">
+            <div class="stat-card__top"><span class="stat-card__label">Late</span><span class="stat-card__icon">&#8987;</span></div>
+            <div class="stat-card__value">27</div>
+            <div class="stat-card__meta">Checked in after 9:15 AM</div>
+          </div>
+        </div>
+
+        <div class="table-toolbar">
+          <div class="search-box">
+            <span class="search-box__icon">&#128269;</span>
+            <input type="text" placeholder="Search by employee or department...">
+          </div>
+          <div style="display:flex; gap:10px;">
+            <input class="form-control" type="date" value="2026-09-18" style="max-width:170px;">
+            <button class="btn btn-secondary">Export</button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Department</th>
+                  <th>Date</th>
+                  <th>Check In</th>
+                  <th>Check Out</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Aarav Sharma</span></div></td>
+                  <td>Engineering</td>
+                  <td>18 Sep 2026</td>
+                  <td>09:02 AM</td>
+                  <td>06:12 PM</td>
+                  <td><span class="status-badge status-badge--success">Present</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">AS</span><span class="cell-person__name">Ananya Singh</span></div></td>
+                  <td>Human Resources</td>
+                  <td>18 Sep 2026</td>
+                  <td>09:15 AM</td>
+                  <td>06:00 PM</td>
+                  <td><span class="status-badge status-badge--warning">Late</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">RV</span><span class="cell-person__name">Rahul Verma</span></div></td>
+                  <td>Finance</td>
+                  <td>18 Sep 2026</td>
+                  <td>&mdash;</td>
+                  <td>&mdash;</td>
+                  <td><span class="status-badge status-badge--info">On Leave</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">PG</span><span class="cell-person__name">Priya Gupta</span></div></td>
+                  <td>Marketing</td>
+                  <td>18 Sep 2026</td>
+                  <td>&mdash;</td>
+                  <td>&mdash;</td>
+                  <td><span class="status-badge status-badge--info">On Leave</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">MN</span><span class="cell-person__name">Meera Nair</span></div></td>
+                  <td>Engineering</td>
+                  <td>18 Sep 2026</td>
+                  <td>08:57 AM</td>
+                  <td>06:05 PM</td>
+                  <td><span class="status-badge status-badge--success">Present</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">VR</span><span class="cell-person__name">Vikram Rao</span></div></td>
+                  <td>Operations</td>
+                  <td>18 Sep 2026</td>
+                  <td>09:01 AM</td>
+                  <td>06:20 PM</td>
+                  <td><span class="status-badge status-badge--success">Present</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">SK</span><span class="cell-person__name">Sanya Kapoor</span></div></td>
+                  <td>Finance</td>
+                  <td>18 Sep 2026</td>
+                  <td>&mdash;</td>
+                  <td>&mdash;</td>
+                  <td><span class="status-badge status-badge--danger">Absent</span></td>
+                </tr>
+                <tr>
+                  <td><div class="cell-person"><span class="cell-person__avatar">KM</span><span class="cell-person__name">Karan Mehta</span></div></td>
+                  <td>Human Resources</td>
+                  <td>18 Sep 2026</td>
+                  <td>09:08 AM</td>
+                  <td>06:02 PM</td>
+                  <td><span class="status-badge status-badge--success">Present</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Employee — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">HR</div>
+      <div class="sidebar__brand-text">
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <p class="sidebar__section-label">Overview</p>
+      <a class="sidebar__link" href="index.html"><span class="sidebar__icon">&#9679;</span><span class="sidebar__label">Dashboard</span></a>
+      <p class="sidebar__section-label">Workforce</p>
+      <a class="sidebar__link" href="employees.html"><span class="sidebar__icon">&#128101;</span><span class="sidebar__label">Employees</span></a>
+      <a class="sidebar__link is-active" href="add-employee.html"><span class="sidebar__icon">&#10133;</span><span class="sidebar__label">Add Employee</span></a>
+      <a class="sidebar__link" href="attendance.html"><span class="sidebar__icon">&#128337;</span><span class="sidebar__label">Attendance</span></a>
+      <a class="sidebar__link" href="leave.html"><span class="sidebar__icon">&#128197;</span><span class="sidebar__label">Leave Management</span></a>
+      <p class="sidebar__section-label">Finance</p>
+      <a class="sidebar__link" href="payroll.html"><span class="sidebar__icon">&#128176;</span><span class="sidebar__label">Payroll</span></a>
+      <a class="sidebar__link" href="reports.html"><span class="sidebar__icon">&#128202;</span><span class="sidebar__label">Reports</span></a>
+      <p class="sidebar__section-label">System</p>
+      <a class="sidebar__link" href="settings.html"><span class="sidebar__icon">&#9881;</span><span class="sidebar__label">Settings</span></a>
+    </nav>
+    <div class="sidebar__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar__title">Add Employee</div>
+      <div class="search-box">
+        <span class="search-box__icon">&#128269;</span>
+        <input type="text" placeholder="Search employees, requests, records...">
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="icon-btn__dot"></span></button>
+        <div class="profile">
+          <div class="profile__avatar">AD</div>
+          <div class="profile__info">
+            <strong>Admin User</strong>
+            <span>HR Administrator</span>
+          </div>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-left:6px;">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Add Employee</h1>
+            <p class="page-subtitle">Create a new employee record for the organization</p>
+          </div>
+          <a class="btn btn-secondary" href="employees.html">&larr; Back to Employees</a>
+        </div>
+
+        <form>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Personal Information</h2>
+            <p class="form-section__hint">Basic details that identify the employee</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name<span class="req">*</span></label>
+                <input class="form-control" type="text" id="firstName" placeholder="e.g. Aarav">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name<span class="req">*</span></label>
+                <input class="form-control" type="text" id="lastName" placeholder="e.g. Sharma">
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input class="form-control" type="date" id="dob">
+              </div>
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-row">
+                  <label class="radio-option"><input type="radio" name="gender"> Male</label>
+                  <label class="radio-option"><input type="radio" name="gender"> Female</label>
+                  <label class="radio-option"><input type="radio" name="gender"> Other</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number<span class="req">*</span></label>
+                <input class="form-control" type="tel" id="phone" placeholder="+91 98765 43210">
+              </div>
+              <div class="form-group">
+                <label for="email">Email<span class="req">*</span></label>
+                <input class="form-control" type="email" id="email" placeholder="name@nimbushr.com">
+              </div>
+              <div class="form-group span-2">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" placeholder="House no., street, city, state, PIN code"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Employment Information</h2>
+            <p class="form-section__hint">Role and reporting details within the organization</p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="empId">Employee ID<span class="req">*</span></label>
+                <input class="form-control" type="text" id="empId" placeholder="e.g. EMP009">
+              </div>
+              <div class="form-group">
+                <label for="department">Department<span class="req">*</span></label>
+                <select class="form-control" id="department">
+                  <option>Engineering</option>
+                  <option>Human Resources</option>
+                  <option>Finance</option>
+                  <option>Marketing</option>
+                  <option>Operations</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="designation">Designation<span class="req">*</span></label>
+                <input class="form-control" type="text" id="designation" placeholder="e.g. Software Engineer">
+              </div>
+              <div class="form-group">
+                <label for="empType">Employment Type</label>
+                <select class="form-control" id="empType">
+                  <option>Full-Time</option>
+                  <option>Part-Time</option>
+                  <option>Contract</option>
+                  <option>Intern</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="joiningDate">Joining Date</label>
+                <input class="form-control" type="date" id="joiningDate">
+              </div>
+              <div class="form-group">
+                <label for="manager">Reporting Manager</label>
+                <select class="form-control" id="manager">
+                  <option>Vikram Rao — Operations Manager</option>
+                  <option>Karan Mehta — Talent Acquisition Lead</option>
+                  <option>Rahul Verma — Accountant</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Salary Information</h2>
+            <p class="form-section__hint">Compensation details for payroll processing</p>
+            <div class="form-grid cols-3">
+              <div class="form-group">
+                <label for="basicSalary">Basic Salary (&#8377;)</label>
+                <input class="form-control" type="number" id="basicSalary" placeholder="e.g. 60000">
+              </div>
+              <div class="form-group">
+                <label for="allowances">Allowances (&#8377;)</label>
+                <input class="form-control" type="number" id="allowances" placeholder="e.g. 8000">
+              </div>
+              <div class="form-group">
+                <label for="salaryGrade">Salary Grade</label>
+                <select class="form-control" id="salaryGrade">
+                  <option>Grade A</option>
+                  <option>Grade B</option>
+                  <option>Grade C</option>
+                  <option>Grade D</option>
+                </select>
+              </div>
+              <div class="form-group span-2">
+                <label>Payment Method</label>
+                <div class="radio-row">
+                  <label class="radio-option"><input type="radio" name="payment"> Bank Transfer</label>
+                  <label class="radio-option"><input type="radio" name="payment"> Cheque</label>
+                  <label class="radio-option"><input type="radio" name="payment"> Cash</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section__title">Emergency Contact</h2>
+            <p class="form-section__hint">Who to reach in case of an emergency</p>
+            <div class="form-grid cols-3">
+              <div class="form-group">
+                <label for="ecName">Contact Name</label>
+                <input class="form-control" type="text" id="ecName" placeholder="e.g. Sunita Sharma">
+              </div>
+              <div class="form-group">
+                <label for="ecRelation">Relationship</label>
+                <input class="form-control" type="text" id="ecRelation" placeholder="e.g. Spouse, Parent">
+              </div>
+              <div class="form-group">
+                <label for="ecPhone">Contact Number</label>
+                <input class="form-control" type="tel" id="ecPhone" placeholder="+91 98765 43219">
+              </div>
+            </div>
+            <div class="checkbox-row" style="margin-top:16px;">
+              <label class="checkbox-option"><input type="checkbox"> I confirm the above details have been verified with the employee</label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a class="btn btn-secondary" href="employees.html">Cancel</a>
+            <a class="btn btn-primary" href="employees.html">Save Employee</a>
+          </div>
+
+        </form>
+
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

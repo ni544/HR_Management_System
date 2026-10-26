@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — Employee &amp; HR Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-shell">
+
+  <aside class="auth-brand">
+    <div class="auth-brand__top">
+      <div class="auth-brand__mark">HR</div>
+      <div>
+        <strong>Nimbus HR</strong>
+        <span>Employee &amp; HR Suite</span>
+      </div>
+    </div>
+
+    <div class="auth-brand__mid">
+      <h2>Set up your organization's HR workspace.</h2>
+      <p>Create an account to start managing employees, attendance, leave and payroll in one place.</p>
+      <ul class="auth-feature-list">
+        <li>Free to get started</li>
+        <li>Built for HR admins and managers</li>
+        <li>No credit card required</li>
+      </ul>
+    </div>
+
+    <div class="auth-brand__foot">Nimbus HR &middot; Phase 1 Prototype</div>
+  </aside>
+
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <h1 class="auth-card__title">Create your account</h1>
+      <p class="auth-card__subtitle">Fill in your details to get started with Nimbus HR</p>
+
+      <form class="auth-form">
+        <div class="form-group">
+          <label for="regName">Full Name</label>
+          <input class="form-control" type="text" id="regName" placeholder="e.g. Aarav Sharma">
+        </div>
+        <div class="form-group">
+          <label for="regEmail">Work Email</label>
+          <input class="form-control" type="email" id="regEmail" placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label for="regCompany">Company Name</label>
+          <input class="form-control" type="text" id="regCompany" placeholder="e.g. Nimbus Technologies Pvt. Ltd.">
+        </div>
+
+        <div class="form-group">
+          <label>Account Type</label>
+          <div class="auth-role-select">
+            <label class="auth-role-option is-selected">
+              <input type="radio" name="accountType" checked style="accent-color:var(--color-primary);"> HR Admin
+            </label>
+            <label class="auth-role-option">
+              <input type="radio" name="accountType" style="accent-color:var(--color-primary);"> Manager
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="regPassword">Password</label>
+          <input class="form-control" type="password" id="regPassword" placeholder="Create a password">
+        </div>
+        <div class="form-group">
+          <label for="regConfirm">Confirm Password</label>
+          <input class="form-control" type="password" id="regConfirm" placeholder="Re-enter your password">
+        </div>
+
+        <label class="checkbox-option" style="font-size:12.6px;">
+          <input type="checkbox">
+          I agree to the Terms of Service and Privacy Policy
+        </label>
+
+        <a class="btn btn-primary btn-block" href="login.html">Create Account</a>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
